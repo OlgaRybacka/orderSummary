@@ -22,9 +22,9 @@
 
 .summary-container {
 	width:30%;
-	margin: 0 auto;
+	margin: 50px auto;
 	background-color: white;
-	border-radius: 30px;
+	border-radius: 20px;
 }
 
 @media screen and (max-width: 600px) {
@@ -32,5 +32,10 @@
 	.page-container {
 		width: 375px;
 		background-image: url('images/pattern-background-mobile.svg');
+	}
+	
+	.summary-container {
+		width:90%;
+		margin: 40px auto;
 	}
 }
