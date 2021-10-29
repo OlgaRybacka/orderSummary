@@ -4,6 +4,7 @@
   --very-pale-blue: hsl(225, 100%, 98%);
   --desaturated-blue: hsl(224, 23%, 55%);
   --dark-blue: hsl(223, 47%, 23%);
+  --small-radius: 12px;
 }
 
 * {
@@ -37,19 +38,19 @@
 	background-repeat: no-repeat;
 	background-image: url('images/illustration-hero.svg');
 	border-radius: 20px;
-	padding-top: 220px;
+	padding-top: 250px;
+	padding-bottom:30px;
 	overflow: auto;
 }
 
 .sc-element {
+	width: 80%;
 	margin: 1em auto;
-	border: 1px solid red;
-	width: fit-content;
+	/*border: 1px solid red;*/
 	text-align: center;
 }
 
 p.sc-element {
-	max-width: 70%;
 	color: var(--desaturated-blue);
 }
 
@@ -58,22 +59,74 @@ h2.sc-element {
 }
 
 .plan-container {
-	width: 60%;
 	display: flex;
-	justify-content: space-around;
-	align-items: center;
+	align-items:center;
+	justify-content: space-between;
+	background-color: var(--very-pale-blue);
+	border-radius:var(--small-radius);
+	
 	
 }
 
-.plan-container > * , .plan-container > div > p {
-	border: 1px solid green;
-	padding: 0;
-	margin: 0;
+.pc-element {
+	/*border: 1px solid green;*/
+	padding: calc(var(--small-radius)*2);
+	/*margin:calc(var(--small-radius)*2);*/
 }
 
 .icon-music {
 	width: 48px;
 	height: 48px;
+}
+
+
+
+.plan-container .pc-element:nth-child(1) {
+	display:flex;
+	align-items:center;
+}
+
+.icon-music, .plan-type {
+	padding-right:var(--small-radius);
+}
+
+.plan-type p:first-child {
+	font-weight:900;
+}
+
+.plan-type p:nth-child(2) {
+color: var(--desaturated-blue);
+}
+
+.plan-type p {
+	margin: 0;
+}
+.change-link {
+	color: var(--bright-blue);
+	font-weight:900;	
+	font-size: 0.9em;
+}
+
+.button-payment {
+	background-color: var(--bright-blue);
+	padding: 15px 0;
+	border-radius: var(--small-radius);
+}
+
+.button-payment a {
+	color: white;
+	text-decoration:none;
+	font-weight:900;	
+	font-size: 0.9em;
+	
+}
+
+.cancel-order a {
+	text-decoration: none;
+	color: var(--desaturated-blue);
+	font-weight:900;	
+	font-size: 0.9em;
+	
 }
 
 @media screen and (max-width: 600px) {
